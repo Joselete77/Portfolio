@@ -59,6 +59,7 @@ html{
     border-radius: 10px;
     cursor: pointer;
     transition: .4s;
+    color: var(--first-color);
 }
 .btn>i{
     margin-left: 10px;

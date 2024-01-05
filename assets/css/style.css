@@ -183,6 +183,9 @@ nav{
     font-size: 17px;
     border-radius: 5px;
 }
+#scheduleMeetingBtn{
+    color: #000000 !important;
+}
 .featured-name{
     font-size: 50px;
     font-weight: 600;

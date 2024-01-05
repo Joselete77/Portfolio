@@ -183,13 +183,6 @@ nav{
     font-size: 17px;
     border-radius: 5px;
 }
-#scheduleMeetingBtn{
-    color: var(--first-color) !important;
-}
-
-#scheduleMeetingBtn:hover{
-    color: #ffffff !important;
-}
 
 .featured-name{
     font-size: 50px;

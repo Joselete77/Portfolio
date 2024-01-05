@@ -79,6 +79,7 @@ body{
     background: linear-gradient(to right, #040404, #000000, #656565);
 }
 .container{
+    overflow-x: hidden;
     width: 100%;
     position: relative;
 }

@@ -116,6 +116,8 @@
 
   window.addEventListener('scroll', scrollActive)
 
+/** Download CV */
+
   function downloadCV() {
       var pathCV = 'https://drive.google.com/uc?export=download&id=1SVzLa_j74mxdS2QHvs_gKkqj6IYObVKU';
       var linkTemp = document.createElement('a');
@@ -128,3 +130,12 @@
 
       document.body.removeChild(linkTemp);
 }
+
+/** Google Meet */
+
+  function scheduleMeeting() {
+    window.open('https://joseangeldorado.youcanbook.me', '_blank');
+  }
+
+  // Add a click event to the button
+  document.getElementById('scheduleMeetingBtn').addEventListener('click', scheduleMeeting);

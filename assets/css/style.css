@@ -225,7 +225,11 @@ nav{
     cursor: pointer;
 }
 .icon:hover{
-    color: var(--third-color);
+    background-color: var(--first-color);
+}
+
+.icon:hover a{
+    color: #ffffff;
 }
 
 /* ----- FEATURED IMAGE BOX ----- */
@@ -263,7 +267,7 @@ nav{
    display: flex;
    justify-content: center;
    align-items: center;
-   width: 150px;
+   width: 160px;
    height: 50px;
    gap: 5px;
    text-decoration: none;

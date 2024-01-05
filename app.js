@@ -42,12 +42,18 @@ app.post('/enviar-correo', (req, res) => {
     // Enviar el correo
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-            return console.error(error);
+            console.error(error);
+            // Enviar un mensaje de error al cliente
+            return res.status(500).send('Error al enviar el correo');
         }
-        console.log('Correo enviado:', info.response);
+    
+        // Mostrar una alerta en la misma página usando JavaScript
+        const alertMessage = '¡Correo enviado con éxito!';
+        const script = `<script>alert('${alertMessage}'); window.location.href = '/';</script>`;
+        
+        // Enviar el script al cliente
+        res.send(script);
     });
-
-    res.send('¡Correo enviado con éxito!');
 });
 
 app.listen(PORT, () => {

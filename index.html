@@ -47,7 +47,7 @@
             </ul>
         </div>
         <div class="nav-button">
-            <button class="btn" onclick="downloadCV()">Descargar CV <i class="uil uil-file-alt"></i></button>
+            <button class="btn" onclick="downloadCV()">Cambiar Idioma <i class="uil uil-language"></i></button>
         </div>
         <div class="nav-menu-btn">
             <i class="uil uil-bars" onclick="myMenuFunction()"></i>
@@ -70,6 +70,7 @@
             </div>            
             <div class="featured-text-btn">
                 <button class="btn" id="scheduleMeetingBtn">Programar Reunión <i class="uil uil-meeting-board"></i></button>
+                <button class="btn" onclick="downloadCV()">Descargar CV <i class="uil uil-file-alt"></i></button>
             </div>
             <div class="social_icons">
                 <div class="icon"><a href="https://www.linkedin.com/in/jose-angel-dorado-gonzalez/"><i class="uil uil-linkedin-alt" style="font-size: 20px;"></i></a></div>
@@ -264,20 +265,46 @@
               <h1>Proyectos</h1>
           </div>
           <div class="project-container">
-            <div class="project-box">
-                <i class="uil uil-briefcase-alt"></i>
-                <h3>Completado</h3>
-                <label>10+ Proyectos Terminados</label>
+            <div class="project-box" onclick="redirectProject('https://github.com/Joselete77/Hoguma')">
+                <i class="uil uil-github-alt"></i>
+                <h3>Hoguma</h3>
+                <label>Aplicación web para la gestión de huéspedes de hotel</label>
             </div>
-            <div class="project-box">
-                <i class="uil uil-users-alt"></i>
-                <h3>Clientes</h3>
-                <label>+5 Clientes Satisfechos</label>
+            
+            <div class="project-box" onclick="redirectProject('https://github.com/Joselete77/Wordle')">
+                <i class="uil uil-github-alt"></i>
+                <h3>Wordle</h3>
+                <label>Aplicación web del famoso juego de adivinar palabras</label>
             </div>
-            <div class="project-box">
-                <i class="uil uil-award"></i>
-                <h3>Experiencia</h3>
-                <label>4+ Años en el Campo</label>
+            
+            <div class="project-box" onclick="redirectProject('https://github.com/Joselete77/UcoDex')">
+                <i class="uil uil-github-alt"></i>
+                <h3>UcoDex</h3>
+                <label>Aplicación móvil de una enciclopedia Pokémon</label>
+            </div>
+            
+            <div class="project-box" onclick="redirectProject('https://github.com/Joselete77/3-Universidad/tree/main/PW')">
+                <i class="uil uil-github-alt"></i>
+                <h3>Gestor de críticas</h3>
+                <label>Aplicación web de gestión de críticas</label>
+            </div>
+            
+            <div class="project-box" onclick="redirectProject('https://github.com/Joselete77/3-Universidad/tree/main/ISSBC/Practica2/aplicacion_basica')">
+                <i class="uil uil-github-alt"></i>
+                <h3>Calculadora</h3>
+                <label>Aplicación de escritorio de una calculadora</label>
+            </div>
+            
+            <div class="project-box" onclick="redirectProject('https://github.com/Joselete77/3-Universidad/tree/main/ISSBC/Practica2/eventos_slots')">
+                <i class="uil uil-github-alt"></i>
+                <h3>Editor</h3>
+                <label>Aplicación de escritorio de un editor de texto</label>
+            </div>
+
+            <div class="project-box" onclick="redirectProject('https://github.com/Joselete77/3-Universidad/tree/main/Redes/Practica%202')">
+                <i class="uil uil-github-alt"></i>
+                <h3>Adivinar refranes</h3>
+                <label>Juego de refranes mediante socket </label>
             </div>
           </div>
        </section>
@@ -285,36 +312,53 @@
        <!-- -------------- CONTACT BOX ---------------- -->
 
        <section class="section" id="contact">
-          <div class="top-header">
-            <h1>Contacto</h1>
-            <span>¿Tienes un proyecto en mente? ¡Contacta conmigo desde aquí!</span>
-          </div>
-          <div class="row">
-             <div class="col">
-                <div class="contact-info">
-                    <h2><i class="uil uil-corner-left-down"></i> Mis datos <i class="uil uil-corner-right-down"></i></h2>
-                    <p><i class="uil uil-envelope"></i> Email: doradojoseangel@gmail.com</p>
-                    <p><i class="uil uil-phone"></i> Teléfono: 635 720 308</p>
+            <div class="top-header">
+                <h1>Contacto</h1>
+                <span>¿Tienes un proyecto en mente? ¡Contacta conmigo desde aquí!</span>
+            </div>
+            <div class="row mb-4">
+                <div class="col">
+                    <div class="contact-info">
+                        <h2><i class="uil uil-corner-left-down"></i> Mis datos <i class="uil uil-corner-right-down"></i></h2>
+                        <p><i class="uil uil-envelope"></i> Email: doradojoseangel@gmail.com</p>
+                        <p><i class="uil uil-phone"></i> Teléfono: 635 720 308</p>
+                    </div>
                 </div>
-             </div>
-             <div class="col">
-                <div class="form-control">
-                    <form action="/enviar-correo" method="post">
-                        <div class="form-inputs">
-                            <input type="text" class="input-field" placeholder="Nombre" name="nombre">
-                            <input type="text" class="input-field" placeholder="Correo electrónico" name="correo">
-                        </div>
-                        <div class="text-area mt-1">
-                            <textarea placeholder="Mensaje" name="mensaje"></textarea>
-                        </div>
-                        <div class="form-button mt-1">
-                            <button class="btn" type="submit">Enviar <i class="uil uil-message"></i></button>
-                        </div>
-                    </form>
+                <div class="col">
+                    <div class="form-control">
+                        <form action="/enviar-correo" method="post">
+                            <div class="form-inputs">
+                                <input type="text" class="input-field" placeholder="Nombre" name="nombre">
+                                <input type="text" class="input-field" placeholder="Correo electrónico" name="correo">
+                            </div>
+                            <div class="text-area mt-1">
+                                <textarea placeholder="Mensaje" name="mensaje"></textarea>
+                            </div>
+                            <div class="form-button mt-1">
+                                <button class="btn" type="submit">Enviar <i class="uil uil-message"></i></button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-             </div>
-          </div>
-       </section>
+            </div>
+            <div class="project-container">
+                <div class="project-box">
+                    <i class="uil uil-award"></i>
+                    <h3>Calidad</h3>
+                    <label>Trabajos de alta calidad</label>
+                </div>
+                <div class="project-box">
+                    <i class="uil uil-lightbulb"></i>
+                    <h3>Innovación</h3>
+                    <label>Ideas frescas</label>
+                </div>
+                <div class="project-box">
+                    <i class="uil uil-chart-growth"></i>
+                    <h3>Colaboración</h3>
+                    <label>Colaboramos para el éxito</label>
+                </div>
+            </div>                                
+        </section>
 
     </main>
 

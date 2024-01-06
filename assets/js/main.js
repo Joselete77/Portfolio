@@ -93,7 +93,7 @@
 /* ----- CHANGE ACTIVE LINK ----- */
   
   const sections = document.querySelectorAll('section[id]')
-
+  
   function scrollActive() {
     const scrollY = window.scrollY;
 
@@ -139,3 +139,8 @@
 
   // Add a click event to the button
   document.getElementById('scheduleMeetingBtn').addEventListener('click', scheduleMeeting);
+
+/** Redirect Proyect */
+function redirectProject(url) {
+  window.location.href = url;
+}

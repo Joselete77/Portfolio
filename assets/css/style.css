@@ -421,6 +421,7 @@ h3{
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     overflow: hidden;
+    cursor: pointer;
 }
 .project-box>i{
     font-size: 50px;
@@ -598,7 +599,7 @@ footer{
     }
     .nav-menu{
         position: fixed;
-        top: 80px;
+        top: 70px;
         left: -100%;
         flex-direction: column;
         justify-content: center;

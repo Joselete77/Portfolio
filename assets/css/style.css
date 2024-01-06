@@ -533,7 +533,8 @@ textarea{
     color: var(--color-white);
 }
 .form-button>.btn:hover{
-    background: #00B5E7;
+    background: #ffffff;
+    color: var(--first-color);
 }
 .form-button i{
     font-size: 18px;

@@ -1,4 +1,5 @@
 const express = require('express');
+const serverless = require('serverless-http');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 require('dotenv').config();
@@ -59,3 +60,5 @@ app.post('/enviar-correo', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor iniciado en http://localhost:${PORT}`);
 });
+
+module.exports.handler = serverless(app);

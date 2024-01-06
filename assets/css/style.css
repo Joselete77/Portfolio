@@ -471,12 +471,6 @@ h3{
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     overflow: hidden;
 }
-.contact-info p a {
-    color: var(--color-white) !important;
-}    
-.contact-info:hover a {
-    color: var(--first-color) !important;
-}
 .contact-info>h2{
     color: var(--color-white);
     margin-bottom: 20px;
@@ -675,13 +669,6 @@ footer{
     .project-box{
         width: 80%;
     }
-    .contact-info p a {
-        color: var(--color-white) !important;
-    }    
-    .contact-info p:hover a {
-        color: var(--first-color) !important;
-    }
-    
 
 }
 

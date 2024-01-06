@@ -609,7 +609,7 @@ footer{
         backdrop-filter: blur(20px);
         width: 100%;
         min-height: 450px;
-        height: 500vh;
+        height: 100vh;
         transition: .3s;
     }
     .nav_menu_list{

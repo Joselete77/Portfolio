@@ -669,6 +669,12 @@ footer{
     .project-box{
         width: 80%;
     }
+    .contact-info a{
+        color: #ffffff;
+    }
+    .contact-info:hover a{
+        color: var(--first-color);
+    }
 
 }
 

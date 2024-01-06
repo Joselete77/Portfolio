@@ -670,7 +670,7 @@ footer{
         width: 80%;
     }
     .contact-info a{
-        color: #ffffff;
+        color: var(--color-white) !important;
     }
     .contact-info:hover a{
         color: var(--first-color);

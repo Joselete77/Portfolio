@@ -474,7 +474,7 @@ h3{
 .contact-info p a {
     color: var(--color-white) !important;
 }    
-.contact-info p:hover a {
+.contact-info:hover a {
     color: var(--first-color) !important;
 }
 .contact-info>h2{

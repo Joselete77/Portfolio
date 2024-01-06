@@ -481,6 +481,9 @@ h3{
     gap: 10px;
     color: var(--color-white);
     margin-block: 5px;
+    text-decoration: none;
+    cursor: default; 
+    user-select: none; 
 }
 .contact-info p>i{
     font-size: 18px;
@@ -668,12 +671,6 @@ footer{
     }
     .project-box{
         width: 80%;
-    }
-    .contact-info>p{
-        color: var(--color-white);
-    }
-    .contact-info:hover.contact-info p{
-        color: #777;
     }
 
 }

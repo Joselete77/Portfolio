@@ -424,7 +424,7 @@ h3{
     cursor: pointer;
 }
 .contact-box{
-    cursor: none !important;
+    cursor: auto !important;
 }
 .project-box>i{
     font-size: 50px;

@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const app = express();
+const router = express.Router(); // Utilizamos un enrutador para definir las rutas
+
 const PORT = process.env.PORT || 3000;
 
 app.use(express.static('./assets'));
@@ -12,12 +14,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Ruta para el formulario
-app.get('/', (req, res) => {
+router.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html');
 });
 
 // Ruta para manejar el envío del formulario
-app.post('/enviar-correo', (req, res) => {
+router.post('/enviar-correo', (req, res) => {
     // Obtener datos del formulario
     const nombre = req.body.nombre;
     const correo = req.body.correo;
@@ -57,8 +59,10 @@ app.post('/enviar-correo', (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
-    console.log(`Servidor iniciado en http://localhost:${PORT}`);
-});
+// Asignamos el enrutador a la ruta base '/.netlify/functions/app'
+app.use('/.netlify/functions/app', router);
 
-module.exports.handler = serverless(app);
+// Exportamos la aplicación con serverless
+module.exports = {
+  handler: serverless(app)
+};

@@ -424,17 +424,7 @@ h3{
     cursor: pointer;
 }
 .contact-box{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 30%;
-    height: 250px;
-    background: var(--color-white);
-    border-radius: 20px;
-    box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
-    overflow: hidden;
+    cursor: none !important;
 }
 .project-box>i{
     font-size: 50px;

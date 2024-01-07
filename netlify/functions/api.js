@@ -39,7 +39,7 @@ router.post('/enviar-correo', (req, res) => {
         if (error) {
             console.error(error);
             // Enviar un mensaje de error al cliente
-            return res.status(500).send('Error al enviar el correo');
+            return res.status(500).send('Error al enviar el correo'+ process.env.EMAIL_USER + process.env.EMAIL_PASS);
         }
     
         // Mostrar una alerta en la misma página usando JavaScript

@@ -16,20 +16,22 @@ router.post('/enviar-correo', (req, res) => {
     const nombre = req.body.nombre;
     const correo = req.body.correo;
     const mensaje = req.body.mensaje;
+    const EMAIL_USER = process.env.EMAIL_USER;
+    const EMAIL_PASS = process.env.EMAIL_PASS;
 
     // Configurar el servicio de correo
     const transporter = nodemailer.createTransport({
         service: 'Gmail',  // Puedes cambiarlo según tu proveedor de correo
         auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
+            user: EMAIL_USER,
+            pass: EMAIL_PASS
         },
     });
 
     // Configurar el contenido del correo
     const mailOptions = {
-        from: process.env.EMAIL_USER,
-        to: process.env.EMAIL_USER,  // Reemplaza con tu dirección de correo destinatario
+        from: EMAIL_USER,
+        to: EMAIL_USER,  // Reemplaza con tu dirección de correo destinatario
         subject: 'Nuevo mensaje del formulario de contacto',
         text: `Nombre: ${nombre}\nCorreo: ${correo}\nMensaje: ${mensaje}`,
     };
@@ -39,7 +41,7 @@ router.post('/enviar-correo', (req, res) => {
         if (error) {
             console.error(error);
             // Enviar un mensaje de error al cliente
-            return res.status(500).send('Error al enviar el correo'+ process.env.EMAIL_USER + process.env.EMAIL_PASS);
+            return res.status(500).send('Error al enviar el correo'+ EMAIL_USER + EMAIL_PASS);
         }
     
         // Mostrar una alerta en la misma página usando JavaScript

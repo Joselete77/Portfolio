@@ -12,43 +12,36 @@ api.use(bodyParser.json());
 const router = Router();
 
 router.post('/enviar-correo', (req, res) => {
-    // Obtener datos del formulario
     const nombre = req.body.nombre;
     const correo = req.body.correo;
     const mensaje = req.body.mensaje;
     const EMAIL_USER = process.env.EMAIL_USER;
     const EMAIL_PASS = process.env.EMAIL_PASS;
 
-    // Configurar el servicio de correo
     const transporter = nodemailer.createTransport({
-        service: 'Gmail',  // Puedes cambiarlo según tu proveedor de correo
+        service: 'Gmail',
         auth: {
             user: EMAIL_USER,
             pass: EMAIL_PASS
         },
     });
 
-    // Configurar el contenido del correo
     const mailOptions = {
         from: EMAIL_USER,
-        to: EMAIL_USER,  // Reemplaza con tu dirección de correo destinatario
+        to: EMAIL_USER, 
         subject: 'Nuevo mensaje del formulario de contacto',
         text: `Nombre: ${nombre}\nCorreo: ${correo}\nMensaje: ${mensaje}`,
     };
 
-    // Enviar el correo
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.error(error);
-            // Enviar un mensaje de error al cliente
             return res.status(500).send('Error al enviar el correo'+ EMAIL_USER + EMAIL_PASS);
         }
     
-        // Mostrar una alerta en la misma página usando JavaScript
         const alertMessage = '¡Correo enviado con éxito!';
         const script = `<script>alert('${alertMessage}'); window.location.href = '/';</script>`;
         
-        // Enviar el script al cliente
         res.send(script);
     });
 });

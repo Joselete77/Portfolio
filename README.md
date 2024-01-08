@@ -3,7 +3,7 @@
 ![Captura desde 2024-01-08 17-20-22](https://github.com/Joselete77/Portfolio/assets/71654543/d9bd6257-c376-44bd-b8a1-8cc7de33a368)
 
 
-This is my personal portfolio website created using HTML, CSS, and JavaScript.
+This is my personal portfolio website created using HTML, CSS, JavaScript, Node.js, and Express.
 
 ## Description
 
@@ -22,6 +22,8 @@ This portfolio showcases my skills, projects, and experiences in the field of we
 - HTML
 - CSS
 - JavaScript
+- Node.js
+- Express
 
 ## Getting Started
 

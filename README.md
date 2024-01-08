@@ -36,6 +36,4 @@ Visit the [portfolio website](https://portafoliojoseangel.netlify.app/) to explo
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 © 2024 Jose Angel Dorado. All rights reserved. This work is protected by copyright laws and is provided for personal and non-commercial use only. Any unauthorized reproduction, distribution, or modification without express and written consent from the author is strictly prohibited.

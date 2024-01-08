@@ -603,6 +603,9 @@ footer{
     }
     .nav-button-responsive{
         display: block;
+        display: flex;
+        justify-content: center;
+        margin-top: 1em;
     }
     .nav-menu.responsive{
         left: 0;

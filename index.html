@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
     <!-- --------- CSS ---------- -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- --------- FAVICON ---------- -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
     <title>Portfolio de José Ángel | Desarrollador y Programador Web</title>
 </head>
@@ -25,29 +25,32 @@
         <div class="nav-menu" id="myNavMenu">
             <ul class="nav_menu_list">
                 <li class="nav_list">
-                    <a href="#home" class="nav-link active-link">Home</a>
+                    <a href="#home" class="nav-link active-link" data-i18n="home">Home</a>
                     <div class="circle"></div>
                 </li>
                 <li class="nav_list">
-                    <a href="#about" class="nav-link">Sobre mí</a>
+                    <a href="#about" class="nav-link" data-i18n="about">Sobre mí</a>
                     <div class="circle"></div>
                 </li>
                 <li class="nav_list">
-                    <a href="#trajectory" class="nav-link">Trayectoria</a>
+                    <a href="#trajectory" class="nav-link" data-i18n="trajectory">Trayectoria</a>
                     <div class="circle"></div>
                 </li>
                 <li class="nav_list">
-                    <a href="#projects" class="nav-link">Proyectos</a>
+                    <a href="#projects" class="nav-link" data-i18n="projects">Proyectos</a>
                     <div class="circle"></div>
                 </li>
                 <li class="nav_list">
-                    <a href="#contact" class="nav-link">Contacto</a>
+                    <a href="#contact" class="nav-link" data-i18n="contact">Contacto</a>
                     <div class="circle"></div>
                 </li>
             </ul>
+            <div class="nav-button-responsive">
+                <button class="btn" onclick="toggleLanguage()"><span data-i18n="language">English</span> <i class="uil uil-language"></i></button>
+            </div>
         </div>
         <div class="nav-button">
-            <button class="btn">English <i class="uil uil-language"></i></button>
+            <button class="btn" onclick="toggleLanguage()"><span data-i18n="language">English</span> <i class="uil uil-language"></i></button>
         </div>
         <div class="nav-menu-btn">
             <i class="uil uil-bars" onclick="myMenuFunction()"></i>
@@ -66,11 +69,11 @@
                 <p><span class="typedText"></span></p>
             </div>
             <div class="featured-text-info">
-                <p>Soy un desarrollador web experimentado en la parte del backend, especializado en tecnologías como Python y Java. Siempre estoy actualizado con las últimas tendencias tecnológicas para garantizar que mis soluciones estén a la vanguardia.</p>
+                <p data-i18n="developerDescription">Soy un desarrollador web experimentado en la parte del backend, especializado en tecnologías como Python y Java. Siempre estoy actualizado con las últimas tendencias tecnológicas para garantizar que mis soluciones estén a la vanguardia.</p>
             </div>            
             <div class="featured-text-btn">
-                <button class="btn" id="scheduleMeetingBtn">Programar Reunión <i class="uil uil-meeting-board"></i></button>
-                <button class="btn" onclick="downloadCV()">Descargar CV <i class="uil uil-file-alt"></i></button>
+                <button class="btn" id="scheduleMeetingBtn"><span data-i18n="scheduleMeeting">Programar Reunión</span> <i class="uil uil-meeting-board"></i></button>
+                <button class="btn" onclick="downloadCV()"><span data-i18n="downloadCV">Descargar CV</span> <i class="uil uil-file-alt"></i></button>
             </div>
             <div class="social_icons">
                 <div class="icon"><a href="https://www.linkedin.com/in/jose-angel-dorado-gonzalez/"><i class="uil uil-linkedin-alt" style="font-size: 20px;"></i></a></div>
@@ -79,13 +82,13 @@
           </div>
           <div class="featured-image">
             <div class="image">
-                <img src="assets/images/jose-img.jpeg" alt="avatar">
+                <img src="images/jose-img.jpeg" alt="avatar">
             </div>
           </div>
           <div class="scroll-icon-box">
             <a href="#about" class="scroll-btn">
                 <i class="uil uil-mouse-alt"></i>
-                <p>Descubre Más</p>
+                <p data-i18n="discoverMore">Descubre Más</p>
             </a>
           </div>
 
@@ -93,22 +96,22 @@
        <!-- -------------- ABOUT BOX ---------------- -->
        <section class="section" id="about">
           <div class="top-header">
-            <h1>Sobre mí</h1>
+            <h1 data-i18n="about">Sobre mí</h1>
           </div>
         <div class="row">
             <div class="about-info">
                 <div class="mb-4">
-                    <p>Hola, soy José Ángel, un apasionado desarrollador web con un historial comprobado de éxitos en proyectos personales y contribuciones notables en el desarrollo web de una importante cadena de hoteles. Mi dedicación y habilidades técnicas me han permitido destacarme en el campo, y siempre estoy listo para asumir nuevos desafíos.</p>
+                    <p data-i18n="paragraph1">Hola, soy José Ángel, un apasionado desarrollador web con un historial comprobado de éxitos en proyectos personales y contribuciones notables en el desarrollo web de una importante cadena de hoteles. Mi dedicación y habilidades técnicas me han permitido destacarme en el campo, y siempre estoy listo para asumir nuevos desafíos.</p>
                     
-                    <p>En mi carrera, he demostrado un enfoque proactivo y un razonamiento sólido, lo que me ha permitido enfrentar diversos problemas y encontrar soluciones efectivas. Soy conocido por mi capacidad para trabajar de manera independiente, asumir la responsabilidad y liderar iniciativas que generen un impacto positivo.</p>
+                    <p data-i18n="paragraph2">En mi carrera, he demostrado un enfoque proactivo y un razonamiento sólido, lo que me ha permitido enfrentar diversos problemas y encontrar soluciones efectivas. Soy conocido por mi capacidad para trabajar de manera independiente, asumir la responsabilidad y liderar iniciativas que generen un impacto positivo.</p>
                     
-                    <p>Además de mi experiencia técnica, me considero una persona creativa y versátil. Estoy constantemente explorando nuevas tecnologías y tendencias en el mundo del desarrollo web para asegurarme de estar al tanto de las últimas innovaciones. Mi enfoque flexible y mente abierta me permite adaptarme rápidamente a los cambios y encontrar soluciones innovadoras para los problemas que enfrento.</p>
+                    <p data-i18n="paragraph3">Además de mi experiencia técnica, me considero una persona creativa y versátil. Estoy constantemente explorando nuevas tecnologías y tendencias en el mundo del desarrollo web para asegurarme de estar al tanto de las últimas innovaciones. Mi enfoque flexible y mente abierta me permite adaptarme rápidamente a los cambios y encontrar soluciones innovadoras para los problemas que enfrento.</p>
                     
-                    <p>En mi trabajo anterior en el desarrollo web para una cadena de hoteles, contribuí significativamente al diseño y la implementación de soluciones web efectivas que mejoraron la experiencia del usuario y aumentaron la visibilidad en línea de la marca. Este logro me impulsó a embarcarme en mi propio proyecto personal, donde estoy aplicando mi experiencia para crear algo único y emocionante.</p>
+                    <p data-i18n="paragraph4">En mi trabajo anterior en el desarrollo web para una cadena de hoteles, contribuí significativamente al diseño y la implementación de soluciones web efectivas que mejoraron la experiencia del usuario y aumentaron la visibilidad en línea de la marca. Este logro me impulsó a embarcarme en mi propio proyecto personal, donde estoy aplicando mi experiencia para crear algo único y emocionante.</p>
                     
-                    <p>Mis habilidades no solo se limitan a la programación; también valoro y fomento un ambiente de trabajo colaborativo. Creo en la importancia de trabajar en equipo y compartir conocimientos para lograr resultados excepcionales. Mi actitud positiva y mi capacidad para comunicarme efectivamente hacen que sea fácil colaborar conmigo en proyectos complejos y desafiantes.</p>
+                    <p data-i18n="paragraph5">Mis habilidades no solo se limitan a la programación; también valoro y fomento un ambiente de trabajo colaborativo. Creo en la importancia de trabajar en equipo y compartir conocimientos para lograr resultados excepcionales. Mi actitud positiva y mi capacidad para comunicarme efectivamente hacen que sea fácil colaborar conmigo en proyectos complejos y desafiantes.</p>
                     
-                    <p>En resumen, soy un desarrollador web apasionado, orientado a resultados y listo para enfrentar cualquier desafío que se presente. Siempre estoy en busca de oportunidades emocionantes para seguir aprendiendo y creciendo en el mundo del desarrollo web.</p>
+                    <p data-i18n="paragraph6">En resumen, soy un desarrollador web apasionado, orientado a resultados y listo para enfrentar cualquier desafío que se presente. Siempre estoy en busca de oportunidades emocionantes para seguir aprendiendo y creciendo en el mundo del desarrollo web.</p>
                 </div>
                     
                 <div class="row">
@@ -137,7 +140,7 @@
                     </div>
                     <div class="skills-box">
                         <div class="skills-header">
-                            <h3>Bases de datos</h3>
+                            <h3 data-i18n="databasesTitle">Bases de datos</h3>
                         </div>
                         <div class="skills-list">
                             <span>MySQL</span>
@@ -163,92 +166,92 @@
         <!-- -------------- ABOUT BOX ---------------- -->
         <section class="section" id="trajectory">
             <div class="top-header">
-                <h1>Trayectoria</h1>
+                <h1 data-i18n="trajectory">Trayectoria</h1>
             </div>
             <div class="row">
                 <div class="about-info">
                     <div class="container">
                         <div class="experience">
                           <div class="item">
-                            <h5 class="company-name">TAX Capital Asesores</h5>
-                            <div class="location"><i class="uil uil-laptop" aria-hidden="true"></i> Remoto</div>
+                            <h5 class="company-name" data-i18n="taxCapitalAsesoresTitle">TAX Capital Asesores</h5>
+                            <div class="location"><i class="uil uil-laptop" aria-hidden="true"></i> <span data-i18n="taxCapitalAsesoresLocation">Remoto</span></div>
                             <div class="job-info">
-                              <div class="title"><span>Full-Stack</span></div>
+                              <div class="title"><span data-i18n="taxCapitalAsesoresJobTitle">Full-Stack</span></div>
                               <div>2023</div>
                             </div>
                             <div class="mt-2">
                               <ul class="fa-ul custom-list">
-                                <li>Lideré un proyecto utilizando tecnologías como Django, Python, AWS, y MySQL, diseñando y desarrollando una aplicación web desde cero, destacando mi experiencia en la implementación de Leaflet para la generación de mapas interactivos. Además, inicié la creación de una aplicación móvil nativa de Android utilizando Kotlin.</li>
+                                <li data-i18n="taxCapitalAsesoresDescription">Lideré un proyecto utilizando tecnologías como Django, Python, AWS, y MySQL, diseñando y desarrollando una aplicación web desde cero, destacando mi experiencia en la implementación de Leaflet para la generación de mapas interactivos. Además, inicié la creación de una aplicación móvil nativa de Android utilizando Kotlin.</li>
                               </ul>
                             </div>
                           </div>
                       
                           <div class="item">
-                            <h5 class="company-name">Soho Boutique Hotels</h5>
-                            <div class="location"><i class="uil uil-map-marker" aria-hidden="true"></i> Málaga</div>
+                            <h5 class="company-name" data-i18n="sohoBoutiqueHotelsTitle">Soho Boutique Hotels</h5>
+                            <div class="location"><i class="uil uil-map-marker" aria-hidden="true"></i> <span data-i18n="sohoBoutiqueHotelsLocation">Málaga</span></div>
                             <div class="job-info">
-                              <div class="title">Webmaster</div>
+                              <div class="title" data-i18n="sohoBoutiqueHotelsJobTitle">Webmaster</div>
                               <div>2023</div>
                             </div>
                             <div class="mt-2">
                                 <ul class="fa-ul custom-list">
-                                    <li>Me desempeñé como profesional especializado en la administración, mantenimiento y optimización de sitios web. Estuve colaborando en diversos proyectos, resolviendo problemas de manera eficiente y atendiendo incidencias con enfoque proactivo. Mi experiencia incluye el desarrollo de aplicaciones mediante Power Automate y Power Apps, así como el mantenimiento y normalización de bases de datos SQL Server.</li>
+                                    <li data-i18n="sohoBoutiqueHotelsDescription">Me desempeñé como profesional especializado en la administración, mantenimiento y optimización de sitios web. Estuve colaborando en diversos proyectos, resolviendo problemas de manera eficiente y atendiendo incidencias con enfoque proactivo. Mi experiencia incluye el desarrollo de aplicaciones mediante Power Automate y Power Apps, así como el mantenimiento y normalización de bases de datos SQL Server.</li>
                                 </ul>
                             </div>
                           </div>
 
                           <div class="item">
-                            <h5 class="company-name">Universidad de Córdoba</h5>
-                            <div class="location"><i class="uil uil-map-marker" aria-hidden="true"></i> Córdoba</div>
+                            <h5 class="company-name" data-i18n="universidadDeCordobaTitle">Universidad de Córdoba</h5>
+                            <div class="location"><i class="uil uil-map-marker" aria-hidden="true"></i> <span data-i18n="universidadDeCordobaLocation">Córdoba</span></div>
                             <div class="job-info">
-                              <div class="title">Ingeniería Informática</div>
+                              <div class="title" data-i18n="universidadDeCordobaJobTitle">Ingeniería Informática</div>
                               <div>2023</div>
                             </div>
                             <div class="mt-2">
                                 <ul class="fa-ul custom-list">
-                                    <li>Durante mi etapa universitaria, me enfoqué en la ingeniería de software, colaborando en entornos ágiles con Scrum y Trello. Desarrollé habilidades en backend como Java, PHP o Python, y frontend con CSS, HTML y JavaScript. También gané experiencia en la gestión de bases de datos como MySQL o MongoDB. Esta formación sólida me preparó para abordar desafíos complejos con creatividad y eficacia.</li>
+                                    <li data-i18n="universidadDeCordobaDescription">Durante mi etapa universitaria, me enfoqué en la ingeniería de software, colaborando en entornos ágiles con Scrum y Trello. Desarrollé habilidades en backend como Java, PHP o Python, y frontend con CSS, HTML y JavaScript. También gané experiencia en la gestión de bases de datos como MySQL o MongoDB. Esta formación sólida me preparó para abordar desafíos complejos con creatividad y eficacia.</li>
                                 </ul>
                             </div>
                           </div>
 
                           <div class="item">
-                            <h5 class="company-name">Universidad Complutense de Madrid</h5>
-                            <div class="location"><i class="uil uil-laptop" aria-hidden="true"></i> Remoto</div>
+                            <h5 class="company-name" data-i18n="universidadComplutenseDeMadridTitle">Universidad Complutense de Madrid</h5>
+                            <div class="location"><i class="uil uil-laptop" aria-hidden="true"></i> <span data-i18n="universidadComplutenseDeMadridLocation">Remoto</span></div>
                             <div class="job-info">
-                              <div class="title">Desarrollo de Apps Móviles</div>
+                              <div class="title" data-i18n="universidadComplutenseDeMadridJobTitle">Desarrollo de Apps Móviles</div>
                               <div>2022</div>
                             </div>
                             <div class="mt-2">
                                 <ul class="fa-ul custom-list">
-                                    <li>En el curso, absorbiendo conocimientos y herramientas clave, exploré a fondo el desarrollo de aplicaciones móviles. Desde la creación de interfaces llamativas hasta la implementación de funciones dinámicas, adquirí habilidades esenciales que ahora me permiten dar vida a ideas innovadoras en el mundo de las apps móviles.</li>
+                                    <li data-i18n="universidadComplutenseDeMadridDescription">En el curso, absorbiendo conocimientos y herramientas clave, exploré a fondo el desarrollo de aplicaciones móviles. Desde la creación de interfaces llamativas hasta la implementación de funciones dinámicas, adquirí habilidades esenciales que ahora me permiten dar vida a ideas innovadoras en el mundo de las apps móviles.</li>
                                 </ul>
                             </div>
                           </div>
 
                           <div class="item">
-                            <h5 class="company-name">Universidad de Alicante</h5>
-                            <div class="location"><i class="uil uil-laptop" aria-hidden="true"></i> Remoto</div>
+                            <h5 class="company-name" data-i18n="universidadDeAlicanteTitle">Universidad de Alicante</h5>
+                            <div class="location"><i class="uil uil-laptop" aria-hidden="true"></i> <span data-i18n="universidadDeAlicanteLocation">Remoto</span></div>
                             <div class="job-info">
-                              <div class="title">Introducción al Desarrollo Web</div>
+                              <div class="title" data-i18n="universidadDeAlicanteJobTitle">Introducción al Desarrollo Web</div>
                               <div>2022</div>
                             </div>
                             <div class="mt-2">
                                 <ul class="fa-ul custom-list">
-                                    <li>En el curso de Introducción al Desarrollo Web, adquirí los fundamentos esenciales para construir experiencias web. Exploré conceptos clave y me sumergí en herramientas indispensables como HTML, CSS y JavaScript.</li>
+                                    <li data-i18n="universidadDeAlicanteDescription">En el curso de Introducción al Desarrollo Web, adquirí los fundamentos esenciales para construir experiencias web. Exploré conceptos clave y me sumergí en herramientas indispensables como HTML, CSS y JavaScript.</li>
                                 </ul>
                             </div>
                           </div>
 
                           <div class="item">
-                            <h5 class="company-name">Instituto Nacional de Ciberseguridad</h5>
-                            <div class="location"><i class="uil uil-laptop" aria-hidden="true"></i> Remoto</div>
+                            <h5 class="company-name" data-i18n="institutoNacionalDeCiberseguridadTitle">Instituto Nacional de Ciberseguridad</h5>
+                            <div class="location"><i class="uil uil-laptop" aria-hidden="true"></i> <span data-i18n="institutoNacionalDeCiberseguridadLocation">Remoto</span></div>
                             <div class="job-info">
-                              <div class="title">Ciberseguridad Teletrabajando</div>
+                              <div class="title" data-i18n="institutoNacionalDeCiberseguridadJobTitle">Ciberseguridad Teletrabajando</div>
                               <div>2021</div>
                             </div>
                             <div class="mt-2">
                                 <ul class="fa-ul custom-list">
-                                    <li>En el curso de Ciberseguridad en el Teletrabajo, me sumergí en las estrategias esenciales para proteger la información en entornos remotos. Desde técnicas de prevención de amenazas hasta prácticas de seguridad digital, adquirí conocimientos sólidos para salvaguardar la integridad de los datos en el mundo del teletrabajo. </li>
+                                    <li data-i18n="institutoNacionalDeCiberseguridadDescription">En el curso de Ciberseguridad en el Teletrabajo, me sumergí en las estrategias esenciales para proteger la información en entornos remotos. Desde técnicas de prevención de amenazas hasta prácticas de seguridad digital, adquirí conocimientos sólidos para salvaguardar la integridad de los datos en el mundo del teletrabajo. </li>
                                 </ul>
                             </div>
                           </div>
@@ -262,49 +265,49 @@
 
        <section class="section" id="projects">
           <div class="top-header">
-              <h1>Proyectos</h1>
+              <h1 data-i18n="projects">Proyectos</h1>
           </div>
           <div class="project-container">
             <div class="project-box" onclick="redirectProject('https://github.com/Joselete77/Hoguma')">
                 <i class="uil uil-github-alt"></i>
-                <h3>Hoguma</h3>
-                <label>Aplicación web para la gestión de huéspedes de hotel</label>
+                <h3 data-i18n="hogumaTitle">Hoguma</h3>
+                <label data-i18n="hogumaDescription">Aplicación web para la gestión de huéspedes de hotel</label>
             </div>
             
             <div class="project-box" onclick="redirectProject('https://github.com/Joselete77/Wordle')">
                 <i class="uil uil-github-alt"></i>
-                <h3>Wordle</h3>
-                <label>Aplicación web del famoso juego de adivinar palabras</label>
+                <h3 data-i18n="wordleTitle">Wordle</h3>
+                <label data-i18n="wordleDescription">Aplicación web del famoso juego de adivinar palabras</label>
             </div>
             
             <div class="project-box" onclick="redirectProject('https://github.com/Joselete77/UcoDex')">
                 <i class="uil uil-github-alt"></i>
-                <h3>UcoDex</h3>
-                <label>Aplicación móvil de una enciclopedia Pokémon</label>
+                <h3 data-i18n="ucoDexTitle">UcoDex</h3>
+                <label data-i18n="ucoDexDescription">Aplicación móvil de una enciclopedia Pokémon</label>
             </div>
             
             <div class="project-box" onclick="redirectProject('https://github.com/Joselete77/3-Universidad/tree/main/PW')">
                 <i class="uil uil-github-alt"></i>
-                <h3>Gestor de críticas</h3>
-                <label>Aplicación web de gestión de críticas</label>
+                <h3 data-i18n="gestorDeCriticasTitle">Gestor de críticas</h3>
+                <label data-i18n="gestorDeCriticasDescription">Aplicación web de gestión de críticas</label>
             </div>
             
             <div class="project-box" onclick="redirectProject('https://github.com/Joselete77/3-Universidad/tree/main/ISSBC/Practica2/aplicacion_basica')">
                 <i class="uil uil-github-alt"></i>
-                <h3>Calculadora</h3>
-                <label>Aplicación de escritorio de una calculadora</label>
+                <h3 data-i18n="calculadoraTitle">Calculadora</h3>
+                <label data-i18n="calculadoraDescription">Aplicación de escritorio de una calculadora</label>
             </div>
             
             <div class="project-box" onclick="redirectProject('https://github.com/Joselete77/3-Universidad/tree/main/ISSBC/Practica2/eventos_slots')">
                 <i class="uil uil-github-alt"></i>
-                <h3>Editor</h3>
-                <label>Aplicación de escritorio de un editor de texto</label>
+                <h3 data-i18n="editorTitle">Editor</h3>
+                <label data-i18n="editorDescription">Aplicación de escritorio de un editor de texto</label>
             </div>
 
             <div class="project-box" onclick="redirectProject('https://github.com/Joselete77/3-Universidad/tree/main/Redes/Practica%202')">
                 <i class="uil uil-github-alt"></i>
-                <h3>Adivinar refranes</h3>
-                <label>Juego de refranes mediante socket </label>
+                <h3 data-i18n="adivinarRefranesTitle">Adivinar refranes</h3>
+                <label data-i18n="adivinarRefranesDescription">Juego de refranes mediante socket </label>
             </div>
           </div>
        </section>
@@ -313,29 +316,29 @@
 
        <section class="section" id="contact">
             <div class="top-header">
-                <h1>Contacto</h1>
-                <span>¿Tienes un proyecto en mente? ¡Contacta conmigo desde aquí!</span>
+                <h1 data-i18n="contact">Contacto</h1>
+                <span data-i18n="contactSubtitle">¿Tienes un proyecto en mente? ¡Contacta conmigo desde aquí!</span>
             </div>
             <div class="row mb-4">
                 <div class="col">
                     <div class="contact-info">
-                        <h2><i class="uil uil-corner-left-down"></i> Mis datos <i class="uil uil-corner-right-down"></i></h2>
-                        <p><i class="uil uil-envelope"></i> Email: doradojoseangel@gmail.com</p>
-                        <p><i class="uil uil-phone"></i> Teléfono: 635 720 308</p>
+                        <h2><i class="uil uil-corner-left-down"></i> <span data-i18n="contactInfoTitle">Mis datos</span> <i class="uil uil-corner-right-down"></i></h2>
+                        <p><i class="uil uil-envelope"></i> <span data-i18n="contactEmail">Correo electrónico: doradojoseangel@gmail.com</span></p>
+                        <p><i class="uil uil-phone"></i> <span data-i18n="contactPhone">Teléfono: 635 720 308</span></p>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-control">
                         <form action="/api/enviar-correo" method="post">
                             <div class="form-inputs">
-                                <input type="text" class="input-field" placeholder="Nombre" name="nombre">
-                                <input type="text" class="input-field" placeholder="Correo electrónico" name="correo">
+                                <input type="text" class="input-field" placeholder="Nombre" name="nombre" data-i18n="nombrePlaceholder">
+                                <input type="text" class="input-field" placeholder="Correo electrónico" name="correo" data-i18n="correoPlaceholder">
                             </div>
                             <div class="text-area mt-1">
-                                <textarea placeholder="Mensaje" name="mensaje"></textarea>
-                            </div>
+                                <textarea placeholder="Mensaje" name="mensaje" data-i18n="mensajePlaceholder"></textarea>
+                            </div>                            
                             <div class="form-button mt-1">
-                                <button class="btn" type="submit">Enviar <i class="uil uil-message"></i></button>
+                                <button class="btn" type="submit"><span data-i18n="contactSubmitButton">Enviar</span> <i class="uil uil-message"></i></button>
                             </div>
                         </form>
                     </div>
@@ -344,18 +347,18 @@
             <div class="project-container">
                 <div class="project-box contact-box">
                     <i class="uil uil-award"></i>
-                    <h3>Calidad</h3>
-                    <label>Trabajos de alta calidad</label>
+                    <h3 data-i18n="qualityTitle">Calidad</h3>
+                    <label data-i18n="qualityDescription">Trabajos de alta calidad</label>
                 </div>
                 <div class="project-box contact-box">
                     <i class="uil uil-lightbulb"></i>
-                    <h3>Innovación</h3>
-                    <label>Ideas frescas</label>
+                    <h3 data-i18n="innovationTitle">Innovación</h3>
+                    <label data-i18n="innovationDescription">Ideas frescas</label>
                 </div>
                 <div class="project-box contact-box">
                     <i class="uil uil-chart-growth"></i>
-                    <h3>Colaboración</h3>
-                    <label>Colaboramos para el éxito</label>
+                    <h3 data-i18n="collaborationTitle">Colaboración</h3>
+                    <label data-i18n="collaborationDescription">Colaboramos para el éxito</label>
                 </div>
             </div>                                
         </section>
@@ -366,7 +369,7 @@
     <!-- --------------- FOOTER --------------- -->
     <footer>
         <div class="bottom-footer">
-            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">José Ángel Dorado</a> - Todos los derehos reservados</p>
+            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">José Ángel Dorado</a> - <span data-i18n="footerText">Todos los derehos reservados</span></p>
         </div>
     </footer>
 
@@ -380,6 +383,6 @@
     <script src="https://unpkg.com/scrollreveal"></script>
 
     <!-- ----- MAIN JS ----- -->
-    <script src="assets/js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

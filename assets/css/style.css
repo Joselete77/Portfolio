@@ -580,6 +580,9 @@ footer{
     color: #ffffff;
     text-align: center;
 }
+.nav-button-responsive{
+    display: none;
+}
 
 
 /* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
@@ -597,6 +600,9 @@ footer{
 @media only screen and (max-width: 900px) {
     .nav-button{
         display: none;
+    }
+    .nav-button-responsive{
+        display: block;
     }
     .nav-menu.responsive{
         left: 0;
@@ -714,6 +720,12 @@ footer{
 .custom-list {
     list-style-type: none;
     color: #ffffff;
+}
+
+.project-box label{
+    text-align: center;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css");
